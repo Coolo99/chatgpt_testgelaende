@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minesweeper</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="../minesweeper/style.css">
+</head>
+<body>
+    <h1>Minesweeper</h1>
+    <div id="settings">
+        <label>Zeilen: <input type="number" id="rows" value="9" min="5" max="30"></label>
+        <label>Spalten: <input type="number" id="cols" value="9" min="5" max="30"></label>
+        <label>Minen: <input type="number" id="mines" value="10" min="1"></label>
+        <button id="startBtn">Start</button>
+    </div>
+    <div id="stats">
+        <span>Zeit: <span id="timer">0</span>s</span>
+        <span>Bestzeit: <span id="highScore">-</span>s</span>
+    </div>
+    <div id="board"></div>
+    <p><a href="index.html">Zurück zur Übersicht</a></p>
+    <script src="../minesweeper/script.js"></script>
+</body>
+</html>
