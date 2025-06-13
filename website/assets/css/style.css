@@ -17,14 +17,14 @@ nav a {
     height: 200px;
     transition: transform 0.3s;
     margin-bottom: 1.5rem;
+    cursor: pointer;
 }
 
 .project-item iframe {
-    width: 50%;
+    width: 100%;
     height: 100%;
     pointer-events: none;
     display: block;
-    margin: 0 auto;
 }
 
 .project-overlay {
@@ -32,6 +32,11 @@ nav a {
     color: #fff;
     opacity: 0;
     transition: opacity 0.3s;
+    pointer-events: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .project-item:hover {
