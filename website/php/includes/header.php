@@ -8,4 +8,7 @@
 <body>
   <header>
     <h1>My PHP Site</h1>
+    <nav>
+      <a href="../../calculator/index.html">Taschenrechner</a>
+    </nav>
   </header>
