@@ -1,0 +1,7 @@
+{
+    "name": "mywebsite/app",
+    "description": "PHP sample site",
+    "require": {
+        "twig/twig": "^3.21"
+    }
+}
