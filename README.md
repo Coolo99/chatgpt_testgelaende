@@ -27,4 +27,11 @@ Der Taschenrechner ist zusätzlich über die Beispiel-Webseite erreichbar. Dort 
 
 ## Minesweeper
 
+
+Im Ordner `minesweeper` liegt ein einfaches Grundgerüst für das bekannte
+Minesweeper-Spiel. Das Layout nutzt Bootstrap und kleine Emoji-Symbole für Mine
+und Fahne. Die Logik ist nur angedeutet, kann aber leicht erweitert werden.
+Auch auf der Beispiel-Webseite gibt es einen Link zu dieser Anwendung.
+
 Im Ordner `minesweeper` entsteht ein einfaches Minesweeper-Spiel. Feldgröße und Anzahl der Minen lassen sich einstellen. Nach einem erfolgreichen Spiel wird die benötigte Zeit als Bestzeit in `localStorage` gespeichert. Über `website/minesweeper.html` ist das Spiel auch innerhalb der Beispiel-Webseite eingebunden.
+

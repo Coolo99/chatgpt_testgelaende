@@ -1,3 +1,4 @@
+
 document.addEventListener('DOMContentLoaded', () => {
     const boardEl = document.getElementById('board');
     const startBtn = document.getElementById('startBtn');
@@ -14,6 +15,18 @@ document.addEventListener('DOMContentLoaded', () => {
     let startTime = 0;
     let timer;
 
+  
+   const board = document.getElementById('board');
+    const template = document.getElementById('tile-template');
+
+    for (let i = 0; i < 100; i++) {
+        const tile = template.content.firstElementChild.cloneNode(true);
+        board.appendChild(tile);
+    }
+
+    // Demo icons
+    board.children[5].classList.add('mine');
+    board.children[10].classList.add('flag');
     function storageKey() {
         return `minesweeper-${rows}x${cols}-${mines}`;
     }
@@ -135,4 +148,5 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     startBtn.addEventListener('click', setupBoard);
+
 });

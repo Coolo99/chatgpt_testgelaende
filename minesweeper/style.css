@@ -1,4 +1,32 @@
 body {
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(10, 32px);
+    grid-auto-rows: 32px;
+    gap: 2px;
+}
+
+.tile {
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    line-height: 1;
+}
+
+.tile.flag {
+    background: url('assets/flag.svg') center/20px 20px no-repeat;
+}
+
+.tile.mine {
+    background: url('assets/mine.svg') center/20px 20px no-repeat;
     font-family: Arial, sans-serif;
     padding: 20px;
 }
