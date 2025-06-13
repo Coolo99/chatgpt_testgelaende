@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', () => {
     console.log('JavaScript is running');
     const calcLink = document.querySelector('a[href="../calculator/index.html"], a[href="../../calculator/index.html"]');
     if (calcLink) {
