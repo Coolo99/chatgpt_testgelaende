@@ -7,6 +7,7 @@ class HomeController extends BaseController
 {
     public function index()
     {
-        echo 'Hello from HomeController';
+        $time = date('Y-m-d H:i:s');
+        include __DIR__ . '/../views/home/index.php';
     }
 }

@@ -1,22 +1,19 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const display = document.getElementById('display');
-    document.querySelectorAll('.buttons button').forEach(btn => {
-        btn.addEventListener('click', () => {
-            const value = btn.dataset.value;
-            const action = btn.dataset.action;
-            if (action === 'clear') {
-                display.value = '';
-                return;
+const display = document.getElementById('display');
+const buttons = document.querySelectorAll('#calculator button');
+
+buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+        const value = btn.textContent;
+        if (value === '=') {
+            try {
+                display.value = eval(display.value);
+            } catch (e) {
+                display.value = 'Error';
             }
-            if (action === 'equals') {
-                try {
-                    display.value = Function('return ' + display.value)();
-                } catch (e) {
-                    display.value = 'Fehler';
-                }
-                return;
-            }
+        } else if (value === 'C') {
+            display.value = '';
+        } else {
             display.value += value;
-        });
+        }
     });
 });
