@@ -24,3 +24,10 @@ Dies ist ein kleines Test-Repository. Neben der bestehenden Beispiel-Webseite be
 Im Ordner `calculator` liegt eine kleine HTML/CSS/JavaScript-Anwendung, die einen simplen, aber dynamischen Taschenrechner bereitstellt. Die `index.html` kann direkt im Browser geöffnet werden.
 
 Der Taschenrechner ist zusätzlich über die Beispiel-Webseite erreichbar. Dort befindet sich nun ein Link, der auf die Anwendung verweist.
+
+## Minesweeper
+
+Im Ordner `minesweeper` liegt ein einfaches Grundgerüst für das bekannte
+Minesweeper-Spiel. Das Layout nutzt Bootstrap und kleine Emoji-Symbole für Mine
+und Fahne. Die Logik ist nur angedeutet, kann aber leicht erweitert werden.
+Auch auf der Beispiel-Webseite gibt es einen Link zu dieser Anwendung.
