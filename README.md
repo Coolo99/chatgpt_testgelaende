@@ -24,3 +24,7 @@ Dies ist ein kleines Test-Repository. Neben der bestehenden Beispiel-Webseite be
 Im Ordner `calculator` liegt eine kleine HTML/CSS/JavaScript-Anwendung, die einen simplen, aber dynamischen Taschenrechner bereitstellt. Die `index.html` kann direkt im Browser geöffnet werden.
 
 Der Taschenrechner ist zusätzlich über die Beispiel-Webseite erreichbar. Dort befindet sich nun ein Link, der auf die Anwendung verweist.
+
+## Minesweeper
+
+Im Ordner `minesweeper` entsteht ein einfaches Minesweeper-Spiel. Feldgröße und Anzahl der Minen lassen sich einstellen. Nach einem erfolgreichen Spiel wird die benötigte Zeit als Bestzeit in `localStorage` gespeichert. Über `website/minesweeper.html` ist das Spiel auch innerhalb der Beispiel-Webseite eingebunden.
