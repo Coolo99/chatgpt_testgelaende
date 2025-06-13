@@ -1,16 +1,19 @@
 document.addEventListener('DOMContentLoaded', () => {
     const boardEl = document.getElementById('board');
+    boardEl.addEventListener('contextmenu', e => e.preventDefault());
     const startBtn = document.getElementById('startBtn');
     const rowsInput = document.getElementById('rows');
     const colsInput = document.getElementById('cols');
     const minesInput = document.getElementById('mines');
     const timerEl = document.getElementById('timer');
     const highScoreEl = document.getElementById('highScore');
+    const flagsLeftEl = document.getElementById('flagsLeft');
 
     let board = [];
     let rows = 0;
     let cols = 0;
     let mines = 0;
+    let flagsLeft = 0;
     let startTime = 0;
     let timer;
 
@@ -47,11 +50,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 cellEl.dataset.row = r;
                 cellEl.dataset.col = c;
                 cellEl.addEventListener('click', onReveal);
+                cellEl.addEventListener('contextmenu', onFlag);
                 boardEl.appendChild(cellEl);
-                board[r][c] = { el: cellEl, mine: false, revealed: false, count: 0 };
+                board[r][c] = { el: cellEl, mine: false, revealed: false, flagged: false, count: 0 };
             }
         }
         let placed = 0;
+        flagsLeft = mines;
+        flagsLeftEl.textContent = flagsLeft;
         while (placed < mines) {
             const r = Math.floor(Math.random() * rows);
             const c = Math.floor(Math.random() * cols);
@@ -88,9 +94,34 @@ document.addEventListener('DOMContentLoaded', () => {
         reveal(r, c);
     }
 
-    function reveal(r, c) {
+    function onFlag(e) {
+        e.preventDefault();
+        const r = parseInt(this.dataset.row);
+        const c = parseInt(this.dataset.col);
+        toggleFlag(r, c);
+    }
+
+    function toggleFlag(r, c) {
         const cell = board[r][c];
         if (cell.revealed) return;
+        if (cell.flagged) {
+            cell.flagged = false;
+            cell.el.classList.remove('flagged');
+            cell.el.textContent = '';
+            flagsLeft++;
+        } else {
+            if (flagsLeft === 0) return;
+            cell.flagged = true;
+            cell.el.classList.add('flagged');
+            cell.el.textContent = '🚩';
+            flagsLeft--;
+        }
+        flagsLeftEl.textContent = flagsLeft;
+    }
+
+    function reveal(r, c) {
+        const cell = board[r][c];
+        if (cell.revealed || cell.flagged) return;
         cell.revealed = true;
         cell.el.classList.add('revealed');
         if (cell.mine) {

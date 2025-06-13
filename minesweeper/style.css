@@ -29,3 +29,7 @@ body {
     background: #e74c3c;
     color: #fff;
 }
+
+.cell.flagged {
+    background: #f1c40f;
+}
