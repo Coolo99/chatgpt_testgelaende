@@ -10,7 +10,9 @@ header, footer {
     background-color: #1f1f1f;
     padding: 10px;
 }
-
+nav a {
+    margin-right: 10px;
+}
 .project-item {
     height: 200px;
     transition: transform 0.3s;
