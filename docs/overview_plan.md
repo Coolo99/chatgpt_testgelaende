@@ -14,4 +14,4 @@ Dieses Dokument enthält die Planung für eine moderne Übersicht-Seite im Dark-
 4. **Responsive:** Bootstrap sorgt für Anpassung an verschiedene Bildschirmgrößen.
 5. **Assets:** Erweiterung der vorhandenen `style.css` sowie `app.js` für eventuelle JS-Effekte.
 
-Die Umsetzung erfolgt in der Datei `website/overview.html`.
+Die Umsetzung erfolgt in der Datei `website/overview.html`. Neben einfachen Beispielseiten wird dort auch ein JavaScript-Taschenrechner eingebunden.
