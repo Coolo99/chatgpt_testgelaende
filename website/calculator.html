@@ -1,58 +1,61 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Taschenrechner</title>
-  <link rel="stylesheet" href="assets/css/style.css">
-  <style>
-    .calculator { width: 200px; margin: 50px auto; }
-    .calculator input { width: 100%; height: 40px; text-align: right; margin-bottom: 5px; }
-    .calculator button { width: 25%; height: 40px; }
-  </style>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        #calculator {
+            width: 200px;
+            margin: 20px auto;
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 4px;
+            background: #fafafa;
+        }
+        #display {
+            width: 100%;
+            height: 30px;
+            margin-bottom: 5px;
+            text-align: right;
+            padding-right: 5px;
+            box-sizing: border-box;
+        }
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 5px;
+        }
+        .buttons button {
+            height: 30px;
+            font-size: 16px;
+        }
+    </style>
 </head>
 <body>
-  <div class="calculator">
-    <input type="text" id="display" readonly>
-    <div>
-      <button onclick="append('7')">7</button>
-      <button onclick="append('8')">8</button>
-      <button onclick="append('9')">9</button>
-      <button onclick="append('/')">/</button>
+    <h1>Simple Calculator</h1>
+    <div id="calculator">
+        <input type="text" id="display" readonly>
+        <div class="buttons">
+            <button>7</button>
+            <button>8</button>
+            <button>9</button>
+            <button>/</button>
+            <button>4</button>
+            <button>5</button>
+            <button>6</button>
+            <button>*</button>
+            <button>1</button>
+            <button>2</button>
+            <button>3</button>
+            <button>-</button>
+            <button>0</button>
+            <button>C</button>
+            <button>=</button>
+            <button>+</button>
+        </div>
     </div>
-    <div>
-      <button onclick="append('4')">4</button>
-      <button onclick="append('5')">5</button>
-      <button onclick="append('6')">6</button>
-      <button onclick="append('*')">*</button>
-    </div>
-    <div>
-      <button onclick="append('1')">1</button>
-      <button onclick="append('2')">2</button>
-      <button onclick="append('3')">3</button>
-      <button onclick="append('-')">-</button>
-    </div>
-    <div>
-      <button onclick="append('0')">0</button>
-      <button onclick="clearDisplay()">C</button>
-      <button onclick="calculate()">=</button>
-      <button onclick="append('+')">+</button>
-    </div>
-  </div>
-  <script>
-    function append(val){
-      document.getElementById('display').value += val;
-    }
-    function clearDisplay(){
-      document.getElementById('display').value = '';
-    }
-    function calculate(){
-      const disp = document.getElementById('display');
-      try {
-        disp.value = eval(disp.value);
-      } catch (e) {
-        disp.value = 'Error';
-      }
-    }
-  </script>
+    <p><a href="index.html">Back to Home</a></p>
+    <script src="assets/js/calculator.js"></script>
 </body>
 </html>
